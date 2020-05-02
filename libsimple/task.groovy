@@ -5,6 +5,7 @@ void call(){
   
   echo "ON NODE"
   node() {
+    /*
     //scm.extensions << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     extensions = [[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']]
     
@@ -19,10 +20,18 @@ void call(){
     echo "----"
     //scm.relativeTargetDir="cd2"
     println scm.dump()
-    checkout scm 
     
     dl = null
+    */
     
+    //checkout scm  
+    checkout([
+         $class: 'GitSCM',
+         branches: scm.branches,
+         doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
+         extensions: [[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
+         userRemoteConfigs: scm.userRemoteConfigs
+    ])
     bat "dir"
   }
   
