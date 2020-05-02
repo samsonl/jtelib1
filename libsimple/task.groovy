@@ -28,7 +28,7 @@ void call(){
     println scm.extensions[1]
     
     exts = []
-    for ( i in scm.exensions )
+    for ( i in scm.extensions )
       exts << i
     exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     
