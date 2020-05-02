@@ -37,7 +37,7 @@ void call(){
       branches: scm.branches,
       doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
       //extensions: [scm.extensions[0],scm.extensions[1],[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
-      extensions: scm.extensions.collect() << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1'],
+      extensions: scm.extensions.collect() + [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1'],
       userRemoteConfigs: scm.userRemoteConfigs
     ])
     
