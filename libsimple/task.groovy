@@ -24,13 +24,11 @@ void call(){
     dl = null
     */
     
-    println scm.extensions[0]
-    println scm.extensions[1]
     
-    exts = []
-    for ( i in scm.extensions )
-      exts << i
-    exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    //exts = []
+    //for ( i in scm.extensions )
+    //  exts << i
+    //exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     
     println "EXTS ${exts.dump()}"
     //checkout scm  
@@ -38,7 +36,7 @@ void call(){
          $class: 'GitSCM',
          branches: scm.branches,
          doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
-         extensions: exts,
+         extensions: [scm.extensions[0],scm.extensions[1],[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
          userRemoteConfigs: scm.userRemoteConfigs
     ])
     bat "dir"
