@@ -27,12 +27,18 @@ void call(){
     println scm.extensions[0]
     println scm.extensions[1]
     
+    exts = []
+    for ( i in scm.exensions )
+      exts << i
+    exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    
+    println "EXTS ${exts.dump()}"
     //checkout scm  
     checkout([
          $class: 'GitSCM',
          branches: scm.branches,
          doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
-         extensions: [[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
+         extensions: exts,
          userRemoteConfigs: scm.userRemoteConfigs
     ])
     bat "dir"
