@@ -2,7 +2,7 @@ void call(){
   println "Task from libsimple"
   
   node() {
-    scm.extensions = [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'checkout-directory']
+    scm.extensions = [[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'checkout-directory']]
     checkout scm 
     bat "dir"
   }
