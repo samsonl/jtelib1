@@ -8,9 +8,9 @@ void call(){
     //scm.extensions << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     extensions = [[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']]
     
-    dl = new hudson.util.DescribableList(hudson.model.Saveable.NOOP,extensions);
+    def dl = new hudson.util.DescribableList(hudson.model.Saveable.NOOP,extensions);
     println "DL ${dl.dump()}"
-    scm.extensions = dl
+    scm.extensions << dl
     
     println "SCM.extensions : ${scm.extensions}"
     
