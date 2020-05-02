@@ -5,7 +5,10 @@ void call(){
   
   echo "ON NODE"
   node() {
-    scm.extensions << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    //scm.extensions << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    extensions = [[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']]
+    
+    scm.extensions = new hudson.util.DescribableList(hudson.model.Saveable.NOOP,extensions);
     
     println scm.extensions
     println scm.extensions.getClass()
