@@ -29,8 +29,8 @@ void call(){
     //for ( i in scm.extensions )
     //  exts << i
     //exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    //println "EXTS ${exts.dump()}"
     
-    println "EXTS ${exts.dump()}"
     //checkout scm  
     checkout([
          $class: 'GitSCM',
