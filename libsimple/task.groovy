@@ -36,7 +36,8 @@ void call(){
     checkout( [ $class: 'GitSCM',
       branches: scm.branches,
       doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
-      extensions: [scm.extensions[0],scm.extensions[1],[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
+      //extensions: [scm.extensions[0],scm.extensions[1],[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
+      extensions: [scm.extensions.collect().add([$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']),
       userRemoteConfigs: scm.userRemoteConfigs
     ])
     
