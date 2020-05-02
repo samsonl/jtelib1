@@ -33,12 +33,12 @@ void call(){
     //exts = null
     
     //checkout scm  
-    checkout [ $class: 'GitSCM',
+    checkout( [ $class: 'GitSCM',
       branches: scm.branches,
       doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
       extensions: [scm.extensions[0],scm.extensions[1],[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
       userRemoteConfigs: scm.userRemoteConfigs
-    ]
+    ])
     
     bat "dir"
   }
