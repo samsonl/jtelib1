@@ -10,8 +10,8 @@ void call(){
     
     def dl = new hudson.util.DescribableList(hudson.model.Saveable.NOOP,extensions);
     println "DL ${dl.dump()}"
-    scm.extensions.add(dl)
-    
+    scm.extensions.addAll(dl)
+    println "After add"
     println "SCM.extensions : ${scm.extensions}"
     
     println scm.extensions.getClass()
