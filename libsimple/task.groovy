@@ -9,6 +9,8 @@ void call(){
     
     println scm.extensions
     println scm.extensions.getClass()
+    println scm.extensions.dump()
+    echo "----"
     //scm.relativeTargetDir="cd2"
      println scm.dump()
     checkout scm 
