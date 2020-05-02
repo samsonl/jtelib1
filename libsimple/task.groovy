@@ -5,7 +5,9 @@ void call(){
   
   echo "ON NODE"
   node() {
-    scm.extensions <<[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'checkout-directory']
+    scm.extensions << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    println scm.extenstions
+    scm.relativeTargetDir="cd2"
      println scm.dump()
     checkout scm 
     bat "dir"
