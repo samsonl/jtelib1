@@ -1,6 +1,8 @@
 void call(){
   println "Task from libsimple"
   
+  scm.extensions << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'checkout-directory']],
+  checkout scm 
   node() {
     bat "dir"
   }
