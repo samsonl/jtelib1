@@ -3,7 +3,7 @@ void call(){
   
  
  
-  this.binding.variables.each {k,v -> println "$k = $v"}
+  binding.variables.each {k,v -> println "$k = $v"}
   
   //echo "GLOBALX = ${keywords.globalx}"
   
