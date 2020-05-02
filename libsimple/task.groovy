@@ -1,6 +1,10 @@
 void call(){
   println "Task from libsimple"
 
+   properties([
+        parameters([string(defaultValue: 'aaaaa', description: '', name: 'a', trim: false)]),
+   ])
+  
   println scm.dump()
   
   echo "ON NODE"
