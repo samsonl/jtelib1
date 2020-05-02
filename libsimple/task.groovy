@@ -20,6 +20,9 @@ void call(){
     //scm.relativeTargetDir="cd2"
     println scm.dump()
     checkout scm 
+    
+    dl = null
+    
     bat "dir"
   }
   
