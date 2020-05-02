@@ -30,16 +30,15 @@ void call(){
     //scm.extensions.each { i -> exts << i }
     //exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     //println "EXTS ${exts.dump()}"
+    //exts = null
     
-    newscm=[ $class: 'GitSCM',
+    //checkout scm  
+    checkout [ $class: 'GitSCM',
       branches: scm.branches,
       doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
       extensions: [scm.extensions[0],scm.extensions[1],[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
       userRemoteConfigs: scm.userRemoteConfigs
     ]
-    //exts = null
-    //checkout scm  
-    checkout newscm
     
     bat "dir"
   }
