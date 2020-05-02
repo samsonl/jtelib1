@@ -24,6 +24,9 @@ void call(){
     dl = null
     */
     
+    println scm.extensions[0]
+    println scm.extensions[1]
+    
     //checkout scm  
     checkout([
          $class: 'GitSCM',
