@@ -1,7 +1,7 @@
 void call(){
   println "Task from libsimple"
   
- cmd "dir"
+ bat "dir"
   
  binding.variables.each {k,v -> println "$k = $v"}
   
