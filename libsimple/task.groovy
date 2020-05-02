@@ -26,7 +26,7 @@ void call(){
     
     
     def exts = []
-    for ( i in scm.extensions ) exts << i
+    scm.extensions.each { i -> exts << i }
     exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     //println "EXTS ${exts.dump()}"
     
