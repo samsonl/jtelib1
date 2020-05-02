@@ -1,11 +1,12 @@
 void call(){
   println "Task from libsimple"
 
-  scm.each {k,v -> println "$k = $v"}
   println scm.dump()
   
+  echo "ON NODE"
   node() {
     scm.extensions <<[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'checkout-directory']
+     println scm.dump()
     checkout scm 
     bat "dir"
   }
