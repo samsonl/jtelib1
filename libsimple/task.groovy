@@ -8,14 +8,17 @@ void call(){
     //scm.extensions << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     extensions = [[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']]
     
-    scm.extensions = new hudson.util.DescribableList(hudson.model.Saveable.NOOP,extensions);
+    dl = new hudson.util.DescribableList(hudson.model.Saveable.NOOP,extensions);
+    println "DL ${dl.dump}"
+    scm.extensions = dl
     
-    println scm.extensions
+    println "SCM.extensions : ${scm.extensions}"
+    
     println scm.extensions.getClass()
     println scm.extensions.dump()
     echo "----"
     //scm.relativeTargetDir="cd2"
-     println scm.dump()
+    println scm.dump()
     checkout scm 
     bat "dir"
   }
