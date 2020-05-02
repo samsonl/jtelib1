@@ -25,10 +25,9 @@ void call(){
     */
     
     
-    //exts = []
-    //for ( i in scm.extensions )
-    //  exts << i
-    //exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    def exts = []
+    for ( i in scm.extensions ) exts << i
+    exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     //println "EXTS ${exts.dump()}"
     
     //checkout scm  
@@ -39,6 +38,8 @@ void call(){
          extensions: [scm.extensions[0],scm.extensions[1],[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
          userRemoteConfigs: scm.userRemoteConfigs
     ])
+    exts = null
+    
     bat "dir"
   }
   
