@@ -6,8 +6,10 @@ void call(){
   echo "ON NODE"
   node() {
     scm.extensions << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    scm.extensions.append([$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd2'])
+    
     println scm.extensions
-    scm.relativeTargetDir="cd2"
+    //scm.relativeTargetDir="cd2"
      println scm.dump()
     checkout scm 
     bat "dir"
