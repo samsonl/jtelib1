@@ -24,19 +24,20 @@ void call(){
     dl = null
     */
     
+    cleanWs()
     
-    def exts = []
-    scm.extensions.each { i -> exts << i }
-    exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
+    //def exts = []
+    //scm.extensions.each { i -> exts << i }
+    //exts << [$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']
     //println "EXTS ${exts.dump()}"
-    newscm=[
-      $class: 'GitSCM',
+    
+    newscm=[ $class: 'GitSCM',
       branches: scm.branches,
       doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
       extensions: [scm.extensions[0],scm.extensions[1],[$class: 'RelativeTargetDirectory',  relativeTargetDir: 'cd1']],
       userRemoteConfigs: scm.userRemoteConfigs
     ]
-    exts = null
+    //exts = null
     //checkout scm  
     checkout newscm
     
