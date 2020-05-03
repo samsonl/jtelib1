@@ -52,7 +52,7 @@ void call(){
   
   echo "keyword version = ${version}"
   
-  echo "${VAR_1}"
+  //echo "${VAR_1}"
   echo "${VAR_2}"
   
 }
