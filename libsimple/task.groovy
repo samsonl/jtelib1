@@ -55,5 +55,5 @@ void call(){
   //echo "${VAR_1}"
   echo "${VAR_2}"
   
-  globl.C("Stuff")
+  //globl.C("Stuff")
 }
