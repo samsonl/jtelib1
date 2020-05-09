@@ -1,8 +1,8 @@
 void call(){
   println "Task from libsimple"
 
-  println STAGE_TWO
-  println STAGE_ONE
+  println Stages2.STAGE_TWO
+  println Stages2.STAGE_ONE
   
    properties([
         parameters([string(defaultValue: 'aaaaa', description: '', name: 'a', trim: false)]),
