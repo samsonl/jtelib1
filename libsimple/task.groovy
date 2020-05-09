@@ -1,6 +1,7 @@
 void call(){
   println "Task from libsimple"
 
+  println STAGE_TWO
   println STAGE_ONE
   
    properties([
