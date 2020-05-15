@@ -2,9 +2,11 @@ void call(){
   println "Task from libsimple"
 
   echo "global.A = ${global.A}"
-  global.A = "AAAAA"
-  echo "global.A = ${global.A}"
-  global = [A:"BBBBB"]
+  
+  global.@A = "AAAAA"
+  //global.A = "AAAAA"
+  //echo "global.A = ${global.A}"
+  //global = [A:"BBBBB"]
   echo "global.A = ${global.A}"
   
   //println Stages2.STAGE_TWO
