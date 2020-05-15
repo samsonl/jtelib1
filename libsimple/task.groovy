@@ -4,7 +4,7 @@ void call(){
   echo "global.A = ${global.A}"
 
   printf ">>>${global.class}"
-  printf ">>>${global.@config}"
+  printf ">>>${global.@config.class}"
   
   def field = global.class.getDeclaredField( "config" );
   field.setAccessible( true );
