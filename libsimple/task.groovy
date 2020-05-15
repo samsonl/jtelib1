@@ -5,7 +5,7 @@ void call(){
 
   printf ">>>${global.class}"
   printf ">>>${global.@config.getClass()}"
-  
+  def save_config = global.@config
   def field = global.class.getDeclaredField( "config" );field.setAccessible( true );field.set( global, [A:"AAAAAAVVVVVV"]);
   //field.set(global, new org.boozallen.plugins.jte.binding.injectors.ApplicationEnvironment("global", [A:"AAAAAAVVVVVV"]))
   
@@ -13,6 +13,8 @@ void call(){
   //global.A = "AAAAA"
   //echo "global.A = ${global.A}"
   //global = [A:"BBBBB"]
+  echo "global.A = ${global.A}"
+  def field = global.class.getDeclaredField( "config" );field.setAccessible( true );field.set( global, save_config);
   echo "global.A = ${global.A}"
   
   //println Stages2.STAGE_TWO
