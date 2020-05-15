@@ -2,6 +2,8 @@ void call(){
   println "Task from libsimple"
 
   echo "global.A = ${global.A}"
+
+  printf ">>>${global.class}"
   
   def field = global.class.getDeclaredField( "config" );
   field.setAccessible( true );
