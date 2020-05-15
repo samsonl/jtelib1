@@ -5,8 +5,8 @@ void call(){
   
   def field = global.class.getDeclaredField( "config" );
   field.setAccessible( true );
-  field.setString( global, "AAAAAAVVVVVV");
-  //global.@config = [A:"AAAAA"]
+  //field.setString( global, "AAAAAAVVVVVV");
+  global.@config = [A:"AAAAA"]
   //global.A = "AAAAA"
   //echo "global.A = ${global.A}"
   //global = [A:"BBBBB"]
