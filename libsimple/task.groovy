@@ -3,8 +3,7 @@ void call(){
 
   echo "global.A = ${global.A}"
   
-  name = "A"
-  global.@"$name" = "AAAAA"
+  global.@config.setProperty("A","AAAAA")
   //global.A = "AAAAA"
   //echo "global.A = ${global.A}"
   //global = [A:"BBBBB"]
