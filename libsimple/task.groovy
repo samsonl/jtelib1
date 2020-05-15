@@ -3,7 +3,8 @@ void call(){
 
   echo "global.A = ${global.A}"
   
-  global.@A = "AAAAA"
+  name = "A"
+  global.@"$name" = "AAAAA"
   //global.A = "AAAAA"
   //echo "global.A = ${global.A}"
   //global = [A:"BBBBB"]
