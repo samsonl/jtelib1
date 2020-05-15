@@ -7,7 +7,7 @@ void call(){
      //C = { p -> echo ">>> ${p}" }
   }
   echo "global.A = ${global.A}"
-  global.A = "AAAAA'
+  global.A = "AAAAA"
   echo "global.A = ${global.A}"
   global = [A:"BBBBB"]
   echo "global.A = ${global.A}"
