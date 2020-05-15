@@ -2,6 +2,7 @@ void call(){
   println "Task from libsimple"
 
   set = "setA"
+  echo "Set ${global.sets}"
   echo "Set ${global.sets.setA.name}"
   echo "Set ${global.sets.setB.name}"
   echo "Set ${global.sets[set].name}"
