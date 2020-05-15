@@ -3,6 +3,9 @@ void call(){
 
   set = "setA"
   echo "Set ${global.sets}"
+  global.sets.each { se ->
+    echo "Set ${se}"
+  }
   echo "Set ${global.sets.setA.name}"
   echo "Set ${global.sets.setB.name}"
   echo "Set ${global.sets[set].name}"
