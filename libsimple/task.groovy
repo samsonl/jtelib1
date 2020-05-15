@@ -14,7 +14,7 @@ void call(){
   //echo "global.A = ${global.A}"
   //global = [A:"BBBBB"]
   echo "global.A = ${global.A}"
-  def field = global.class.getDeclaredField( "config" );field.setAccessible( true );field.set( global, save_config);
+ field.set( global, save_config);
   echo "global.A = ${global.A}"
   
   //println Stages2.STAGE_TWO
