@@ -1,6 +1,17 @@
 void call(){
   println "Task from libsimple"
 
+   global {
+     A = "aval"
+     B = "B" ?: "default if not set"
+     //C = { p -> echo ">>> ${p}" }
+  }
+  echo "global.A = ${global.A}"
+  global.A = "AAAAA'
+  echo "global.A = ${global.A}"
+  global = [A:"BBBBB"]
+  echo "global.A = ${global.A}"
+  
   //println Stages2.STAGE_TWO
   //println Stages2.STAGE_ONE
   
