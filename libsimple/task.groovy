@@ -6,10 +6,8 @@ void call(){
   printf ">>>${global.class}"
   printf ">>>${global.@config.getClass()}"
   
-  def field = global.class.getDeclaredField( "config" );
-  field.setAccessible( true );
-  //field.set( global, [A:"AAAAAAVVVVVV"]);
-  field.set(global, new org.boozallen.plugins.jte.binding.injectors.ApplicationEnvironment("global", [A:"AAAAAAVVVVVV"]))
+  def field = global.class.getDeclaredField( "config" );field.setAccessible( true );field.set( global, [A:"AAAAAAVVVVVV"]);
+  //field.set(global, new org.boozallen.plugins.jte.binding.injectors.ApplicationEnvironment("global", [A:"AAAAAAVVVVVV"]))
   
   //global.@config = [A:"AAAAA"]
   //global.A = "AAAAA"
