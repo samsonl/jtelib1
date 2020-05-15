@@ -1,6 +1,10 @@
 void call(){
   println "Task from libsimple"
 
+  set = "setA"
+  echo "Set ${global.sets[set].name}"
+        
+        
   echo "global.A = ${global.A}"
 
   printf ">>>${global.class}"
