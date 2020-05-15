@@ -4,12 +4,13 @@ void call(){
   set = "setA"
   echo "Set ${global.sets}"
   global.sets.each { se ->
-    echo "Set ${se}"
+    echo "Set ${se} / ${se.getClass()}"
   }
-  echo "Set ${global.sets.setA.name}"
-  echo "Set ${global.sets.setB.name}"
-  echo "Set ${global.sets[set].name}"
-  echo "Set ${global.sets['setA'].name}"
+  echo "Set A ${global.sets.setA}"
+  echo "Set A.name ${global.sets.setA.name}"
+  echo "Set B.anme ${global.sets.setB.name}"
+  echo "Set [set] ${global.sets[set].name}"
+  echo "Set ['setA'] ${global.sets['setA'].name}"
         
         
   echo "global.A = ${global.A}"
