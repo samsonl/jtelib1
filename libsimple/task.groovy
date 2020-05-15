@@ -4,10 +4,13 @@ void call(){
   echo "global.A = ${global.A}"
 
   printf ">>>${global.class}"
+  printf ">>>${global.@config}"
   
   def field = global.class.getDeclaredField( "config" );
   field.setAccessible( true );
   field.set( global, [A:"AAAAAAVVVVVV"]);
+  //field.set(global, new org.boozallen.plugins.jte.binding.injectors.ApplicationEnvironment("global",
+  
   //global.@config = [A:"AAAAA"]
   //global.A = "AAAAA"
   //echo "global.A = ${global.A}"
