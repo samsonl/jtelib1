@@ -12,10 +12,10 @@ def getLocalC() { return this.@localC }
 void call(){
   println "Task from libsimple"
   TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
-
-  def resp = bat(returnStdOut:true,script:"dir c:\\ /s")
-  TemplateLogger.print("Batch file output...\n"+resp, [initiallyHidden:true])
- 
+  node() {
+    def resp = bat(returnStdOut:true,script:"dir c:\\ /s")
+    TemplateLogger.print("Batch file output...\n"+resp, [initiallyHidden:true])
+  } 
 
   //echo "Locals A=${this.localA} B=${localB} C=${localC}"
   echo "Locals C=${localC}"
