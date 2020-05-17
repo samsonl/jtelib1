@@ -12,7 +12,7 @@ void call(){
   TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
   
   //echo "Locals A=${this.localA} B=${localB} C=${localC}"
-  echo "Locals B=${localB} C=${localC}"
+  echo "Locals C=${localC}"
 
   echo "A Values = ${global.A}"
   echo "B Values = ${global.B}"
