@@ -2,6 +2,9 @@ void call(){
   println "Task from libsimple"
 
   echo "A Values = ${global.A}"
+  echo "B Values = ${global.B}"
+  echo "C Values = ${global.C}"
+  return
   
   set = "setA"
   echo "Set ${global.sets}"
