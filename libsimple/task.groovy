@@ -5,6 +5,7 @@ void call(){
   echo "B Values = ${global.B}"
   echo "C Values = ${global.C}"
   echo "D Values = ${global.D}"
+  echo "Config A = ${config.A}"
   return
   
   set = "setA"
