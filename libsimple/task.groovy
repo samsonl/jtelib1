@@ -1,4 +1,5 @@
 import groovy.transform.Field
+import org.boozallen.plugins.jte.console.TemplateLogger
 
 localA = "localA"
 def localB = "localB"
@@ -8,7 +9,8 @@ localC = "localC"
 
 void call(){
   println "Task from libsimple"
-
+  TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
+  
   //echo "Locals A=${this.localA} B=${localB} C=${localC}"
   echo "Locals B=${localB} C=${localC}"
 
