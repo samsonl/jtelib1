@@ -1,6 +1,8 @@
 void call(){
   println "Task from libsimple"
 
+  echo "A Values = ${global.A}"
+  
   set = "setA"
   echo "Set ${global.sets}"
   //global.sets.each { se ->
