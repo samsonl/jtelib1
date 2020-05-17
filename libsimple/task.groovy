@@ -7,7 +7,7 @@ localC = "localC"
 void call(){
   println "Task from libsimple"
 
-  echo "Locals A=${localA} B=${localB} C="localC}"
+  echo "Locals A=${localA} B=${localB} C=${localC}"
 
   echo "A Values = ${global.A}"
   echo "B Values = ${global.B}"
