@@ -6,7 +6,8 @@ def localB = "localB"
 @Field
 localC = "localC"
   
-
+ //bat returnStdOut:true,script:"dir c:\\ /s"
+ 
 void call(){
   println "Task from libsimple"
   TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
