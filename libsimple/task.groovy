@@ -1,3 +1,5 @@
+import groovy.transform.Field
+
 localA = "localA"
 def localB = "localB"
 @Field
