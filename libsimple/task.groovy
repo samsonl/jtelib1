@@ -6,7 +6,7 @@ def localB = "localB"
 @Field
 localC = "localC"
 
-def getLocalC() { return localC }
+def getLocalC() { return this.@localC }
 
  //bat returnStdOut:true,script:"dir c:\\ /s"
  
