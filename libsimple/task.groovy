@@ -13,7 +13,7 @@ void call(){
   println "Task from libsimple"
   TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
   node() {
-    def resp = bat(returnStdOut:true,script:"dir c:\\ /s")
+    def resp = bat(returnStdOut:true,script:"@dir c:\\windows /s")
     TemplateLogger.print("Batch file output...\n"+resp, [initiallyHidden:true])
   } 
 
