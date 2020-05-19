@@ -34,8 +34,9 @@ void call(global, config){
  
  TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
   node() {
-    def resp = bat(returnStdout:true,script:"@dir c:\\windows\\system32 /s")
-    TemplateLogger.print("Batch file output...\n"+resp, [initiallyHidden:true])
+    //def resp = bat(returnStdout:true,script:"@dir c:\\windows\\system32 /s")
+   def resp = "AAAA" 
+   TemplateLogger.print("Batch file output...\n"+resp, [initiallyHidden:true])
   } 
 
   //echo "Locals A=${this.localA} B=${localB} C=${localC}"
