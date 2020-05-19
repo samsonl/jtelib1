@@ -1,6 +1,6 @@
 public class Helper {
   public helpme() {
-    echo "HELPME"
+    println "HELPME"
   }
 }
 
