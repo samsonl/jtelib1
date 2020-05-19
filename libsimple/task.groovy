@@ -12,7 +12,7 @@ def getLocalC() { return this.@localC }
 void call(){
   println "Task from libsimple"
   
- def hel = new Helper()
+ def hel = new util.Helper()
  help.helpme()
  
  echo "A=${localA}"
