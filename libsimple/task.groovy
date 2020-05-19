@@ -13,6 +13,11 @@ def getLocalC() { return this.@localC }
 void call(){
   println "Task from libsimple"
   
+ 
+ this.getBinding().getVariables().each { n,v ->
+  println "var ${n}=${v}"
+ }
+ 
  //def hel = new util.Helper()
  //help.helpme()
  def hel = dostuff.getHelper()
