@@ -5,7 +5,7 @@ public class Helper {
     println "HELPME"
   }
 }
-get getHelper() {
+def getHelper() {
   return new util.Helper()
 }
 
