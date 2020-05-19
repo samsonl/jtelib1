@@ -22,7 +22,7 @@ void call(global, config){
   println "Task from libsimple"
   echo "global.A Values = ${global.A}"
   echo "global.B Values = ${global.B}"
-  echo "config.A = ${config.1}"
+  echo "config.A = ${config.A}"
  
  
  this.getBinding().getVariables().each { n,v ->
