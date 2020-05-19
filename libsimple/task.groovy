@@ -10,11 +10,13 @@ def localB = "localB"
 localC = "localC"
 println "OK"
 
+println "Exception Test - Start"
 try {
    error "FAIL ME SHELL"
 } catch (Exception e ) {
    println "Err:${e.getMessage()}"
 }
+println "Exception Test - Done"
 
 def getLocalC() { return this.@localC }
 
