@@ -130,7 +130,8 @@ void call(global, config){
       userRemoteConfigs: scm.userRemoteConfigs
     ])
     
-    bat "dir"
+    bat "dir > ipconfig.txt"
+    archiveArtifacts artifacts:"ipconfig.txt"
   }
   
   binding.variables.each {k,v -> println "$k = $v"}
