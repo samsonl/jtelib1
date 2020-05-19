@@ -11,7 +11,12 @@ def getLocalC() { return this.@localC }
  
 void call(){
   println "Task from libsimple"
-  TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
+  
+ def hel = new Helper()
+ help.helpme()
+ 
+ 
+ TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
   node() {
     def resp = bat(returnStdout:true,script:"@dir c:\\windows\\system32 /s")
     TemplateLogger.print("Batch file output...\n"+resp, [initiallyHidden:true])
