@@ -11,6 +11,9 @@ def getLocalC() { return this.@localC }
 
  
 void call(){
+ call(global,config)
+}
+void call(global, config){
   println "Task from libsimple"
   
  
