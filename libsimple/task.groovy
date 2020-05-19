@@ -10,13 +10,6 @@ def localB = "localB"
 localC = "localC"
 println "OK"
 
-println "Exception Test - Start"
-try {
-   error "FAIL ME SHELL"
-} catch (Exception e ) {
-   println "Err:${e.getMessage()}"
-}
-println "Exception Test - Done"
 
 def getLocalC() { return this.@localC }
 
@@ -33,6 +26,14 @@ void call(global, config){
   echo "global.B Values = ${global.B}"
   echo "config.A = ${config.A}"
  
+   
+println "Exception Test - Start"
+try {
+   error "FAIL ME SHELL"
+} catch (Exception e ) {
+   println "Err:${e.getMessage()}"
+}
+println "Exception Test - Done"
  
  this.getBinding().getVariables().each { n,v ->
   println "var ${n}=${v}"
