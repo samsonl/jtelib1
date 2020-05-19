@@ -5,6 +5,9 @@ public class Helper {
     println "HELPME"
   }
 }
+get getHelper() {
+  return new util.Helper()
+}
 
 def call() {
   echo "libA dostuff"
