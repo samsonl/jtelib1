@@ -11,11 +11,12 @@ def getLocalC() { return this.@localC }
 
  
 void call(){
- call(global,config)
+ call([A:"override A"],config)
 }
 void call(global, config){
   println "Task from libsimple"
-  
+  echo "global.A Values = ${global.A}"
+ 
  
  this.getBinding().getVariables().each { n,v ->
   println "var ${n}=${v}"
