@@ -1,3 +1,5 @@
+package util
+
 public class Helper {
   public helpme() {
     println "HELPME"
