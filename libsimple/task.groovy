@@ -32,6 +32,7 @@ try {
    error "FAIL ME SHELL"
 } catch (Exception e ) {
    println "Err:${e.getMessage()}"
+   throw new Exception("ALL DONE AND DID NOT WORK")
 }
 println "Exception Test - Done"
  
