@@ -14,7 +14,7 @@ def getLocalC() { return this.@localC }
 
  
 void call(){
- echo "1.config.C = ${config.C}"
+ echo "1.config.A = ${config.A}"
  
  call([A:"override A"],config)
 }
@@ -22,7 +22,7 @@ void call(global, config){
   println "Task from libsimple"
   echo "global.A Values = ${global.A}"
   echo "global.B Values = ${global.B}"
-  echo "config.C = ${config.C}"
+  echo "config.A = ${config.1}"
  
  
  this.getBinding().getVariables().each { n,v ->
