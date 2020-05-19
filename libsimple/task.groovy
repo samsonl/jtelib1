@@ -39,6 +39,10 @@ void call(global, config){
  //echo "B=${localB}"
  echo "C=${localC}"
  
+  node() { 
+    bat "dir > ipconfig.txt"
+    archiveArtifacts artifacts:"ipconfig.txt"
+  }
  TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
   node() {
     //def resp = bat(returnStdout:true,script:"@dir c:\\windows\\system32 /s")
