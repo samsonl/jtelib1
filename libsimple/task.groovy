@@ -16,7 +16,8 @@ def getLocalC() { return this.@localC }
 void call(){
  echo "1.config.A = ${config.A}"
  
- call([A:"override A"],config)
+ call([A:"override A"],[A:"config A override")
+ //call(global,config)
 }
 void call(global, config){
   println "Task from libsimple"
