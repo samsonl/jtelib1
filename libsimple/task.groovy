@@ -14,6 +14,8 @@ def getLocalC() { return this.@localC }
 
  
 void call(){
+ echo "1.config.C = ${config.C}"
+ 
  call([A:"override A"],config)
 }
 void call(global, config){
