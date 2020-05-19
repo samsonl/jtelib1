@@ -1,6 +1,9 @@
 import groovy.transform.Field
 import org.boozallen.plugins.jte.console.TemplateLogger
 
+@Field
+step_name = "task.groovy"
+
 localA = "localA"
 def localB = "localB"
 @Field
