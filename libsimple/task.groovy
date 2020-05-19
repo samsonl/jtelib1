@@ -15,6 +15,8 @@ void call(){
   
  //def hel = new util.Helper()
  //help.helpme()
+ def hel = dostuff.getHelper()
+ hel.helpme()
  
  //echo "A=${localA}"
  //echo "B=${localB}"
