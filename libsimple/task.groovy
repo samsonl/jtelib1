@@ -15,6 +15,9 @@ void call(){
  def hel = new Helper()
  help.helpme()
  
+ echo "A=${localA}"
+ echo "B=${localB}"
+ echo "C=${localC}"
  
  TemplateLogger.print("OK GO\n1\n2", [initiallyHidden:true])
   node() {
