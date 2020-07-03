@@ -1,27 +1,27 @@
 
 @Init
 def init(context) {
-  echo "Init"
+  echo "Init ${context}"
 }
 
 @BeforeStep
 def before(context) {
-  echo "Before"
+  echo "Before ${context}"
 }
 
 @AfterStep
 def after(context) {
-  echo "After"
+  echo "After ${context}"
 }
 
 @CleanUp
 def clean(context) {
-  echo "Clean"
+  echo "Clean ${context}"
 }
 
 @Notify
 def notify(context) {
-  echo "Notify"
+  echo "Notify ${context}"
 }
 
 
