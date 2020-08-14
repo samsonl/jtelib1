@@ -1,20 +1,20 @@
 @Init
-void call(context){
+void call1(context){
   echo "lc:Init"
 }
 @BeforeStep
-void call(context){
+void call2(context){
   echo "lc:BeforeStep"
 }
 @AfterStep
-void call(context){
+void call3(context){
   echo "lc:AfterStep"
 }
 @CleanUp
-void call(context){
+void call4(context){
   echo "lc:CleanUp"
 }
 @Notify
-void call(context){
+void call5(context){
   echo "lc:Notify"
 }
