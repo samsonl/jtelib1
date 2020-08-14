@@ -14,7 +14,10 @@ void call3(context){
 void call4(context){
   //echo "lc:CleanUp ${context}"
 }
+
+@groovy.transform.Field notify_called = false
 @Notify
 void call5(context){
-  echo "lc:Notify ${context}"
+  echo "lc:Notify ${context} called : ${notify_called}"
+  notify_called = true
 }
